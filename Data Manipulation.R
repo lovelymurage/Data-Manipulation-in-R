@@ -12,6 +12,13 @@ print(data)
 #viewing column names
 colnames(data)
 
+#Inspecting the data
+head(data)
+#Structure of the data
+str(data)
+#summary statistics of the data
+summary(data)
+
 #Checking for missing values
 colSums(is.na(data))
 
@@ -20,11 +27,14 @@ data <- drop_na(data)
 #Checking for missing values
 colSums(is.na(data))
 
+#Structure of the data
+str(data)
+#summary statistics of the data
+summary(data)
 
 #select only a few columns but retain all rows
 select_few_cols <- select(data, "first_name", "last_name","email","gender")
 head(select_few_cols)
-
 
 #drop email column from select_few_cols dataset
 select(select_few_cols, -email)
